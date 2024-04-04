@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CodeSyncPH Community</title>
+   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" type="text/css" href="update.css" />
+   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+
+<body>
+   <div id="particles-js"></div>
+   <!-- Header Section -->
+   <header class="header" id="header">
+      <nav class="navbar container">
+         <a href="#home" class="brand" id="brand">CodeSync.PH</a>
+         <div class="burger" id="burger">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+         </div>
+         <div class="menu" id="menu">
+            <ul class="menu-inner">
+               <li class="menu-item"><a href="#home" class="menu-link active">Home</a></li>
+               <li class="menu-item"><a href="#events" class="menu-link">Events</a></li>
+               <li class="menu-item"><a href="#tools" class="menu-link">Tools</a></li>
+               <li class="menu-item"><a href="#about" class="menu-link">About</a></li>
+            </ul>
+         </div>
+         <a href="https://github.com/CodeSyncPH" class="menu-block"><i class="bx bxl-github"></i>&nbsp;&nbsp;Github</a>
+      </nav>
+   </header>
+   <!-- Main Section -->
+   <main class="main">
+      <section id="home" class="section">
+         <div class="container banner-column">
+
+            <div class="banner-image img-effect">
+               <div class="block">
+                  <div class="side -main"></div>
+                  <div class="side -left"></div>
+               </div>
+               <div class="block">
+                  <div class="side -main"></div>
+                  <div class="side -left"></div>
+               </div>
+               <div class="block">
+                  <div class="side -main"></div>
+                  <div class="side -left"></div>
+               </div>
+            </div>
+
+            <div class="banner-inner">
+               <h1 class="heading-xl">CodeSync.PH!</h1>
+               <p class="paragraph">
+                  At CodeSync.PH, we cultivate a dynamic community of programmers united by a shared passion for learning, creation, and problem-solving. Whether you're embarking on your coding journey or a seasoned developer, you've found your home with us.
+               </p>
+               <button class="btn btn-darken btn-inline" id="explore_btn">
+                  Explore&nbsp;<i class="bx bx-right-arrow-alt"></i>
+               </button>
+            </div>
+            <div class="banner-links">
+               <a href="https://www.facebook.com/CodeSync.PH" title="" target="_blank"><i class="bx bxl-facebook"></i></a>
+               <a href="https://www.instagram.com/codesync.ph" title="" target="_blank"><i class="bx bxl-instagram"></i></a>
+               <a href="https://discord.com/invite/cpNguAqNGr" title="" target="_blank"><i class="bx bxl-discord"></i></a>               
+            </div>
+         </div>
+      </section>
+      <section id="events" class="section">
+         <div class="container">
+            <h2>Events</h2>
+            <p>Stay informed about our upcoming events!</p>
+            <div class="uploads-container">
+               <div class="events-secondary-container">
+                  <h2>Ongoing Events</h2>
+                  <div class="link-webinar-container">
+                     <hr>
+                     <div class="link-webinar-slot">
+                        <a href="#">
+                           <img src="./pictures/sample/webinar.png" alt="Webinar">
+                           <h4 class="link-webinar-text">Lorem ipsum webinar</h4>
+                        </a>
+                     </div>
+                     
+                  </div>
+               </div>
+               <div class="events-secondary-container">
+                  <h2>Upcoming Events</h2>
+                  <div class="link-webinar-container">
+                     <hr>
+                     <div class="link-webinar-slot">
+                        <a href="#">
+                           <img src="./pictures/sample/webinar.png" alt="Webinar">
+                           <h4 class="link-webinar-text">Lorem ipsum webinar</h4>
+                        </a>
+                     </div>
+                     <div class="link-webinar-slot">
+                        <a href="#">
+                           <img src="./pictures/sample/webinar.png" alt="Webinar">
+                           <h4 class="link-webinar-text">Lorem ipsum webinar</h4>
+                        </a>
+                     </div>
+                     <div class="link-webinar-slot">
+                        <a href="#">
+                           <img src="./pictures/sample/webinar.png" alt="Webinar">
+                           <h4 class="link-webinar-text">Lorem ipsum webinar</h4>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="events-secondary-container" id="pastevents">
+               
+                  
+                  <script>
+                     const _past_e = [{title: "Webinar", src: "./pictures/sample/webinar.png"}, {title: "Webinar", src: "./pictures/sample/webinar.png"},{title: "Webinar", src: "./pictures/sample/webinar.png"},{title: "Webinar", src: "./pictures/sample/webinar.png"},{title: "Webinar", src: "./pictures/sample/webinar.png"},{title: "Webinar", src: "./pictures/sample/webinar.png"},{title: "Webinar", src: "./pictures/sample/webinar.png"}];
+
+                     const root = document.getElementById("pastevents");
+
+
+                     let h2 = document.createElement("h2");
+                     h2.innerText = "Past Events";
+                     root.append(h2);
+
+                     let link_webinar_container;
+
+                     for (event in _past_e) {
+
+                           if (!link_webinar_container) {
+                              link_webinar_container = document.createElement("div");
+                              link_webinar_container.setAttribute("class", "link-webinar-container");
+                              link_webinar_container.append(document.createElement("hr"));
+                           }
+                           let link_webinar_slot = document.createElement("div");
+                           link_webinar_slot.setAttribute("class", "link-webinar-slot");
+
+                           let a_href = document.createElement("a");
+                           a_href.setAttribute("href", "#");
+
+                           let img = document.createElement("img");
+                           img.setAttribute("src", _past_e[event].src);
+                           a_href.append(img);
+
+                           let link_webinar_text = document.createElement("h4");
+                           link_webinar_text.innerText = _past_e[event].title + " - " + event;
+                           link_webinar_text.setAttribute("class", "link-webinar-text");
+                           a_href.append(link_webinar_text);
+
+                           link_webinar_slot.append(a_href);
+
+                           link_webinar_container.append(link_webinar_slot);
+
+                           if (event % 3 == 0) {
+                           root.append(link_webinar_container);
+                           link_webinar_container = undefined;
+                        }
+
+                     }
+
+                  </script>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section id="tools" class="section">
+         <div class="container">
+            <h2>Tools</h2>
+            <p>Discover our curated selection of essential tools for developers:</p>
+            <div class="link-webinar-container">
+               <hr>
+               <div class="link-webinar-slot">
+                  <a href="#">
+                     <img src="https://www.20i.com/blog/wp-content/uploads/2022/08/git-blog-header.png" alt="Git">
+                     <h4 class="link-webinar-text">Git</h4>
+                  </a>
+               </div>
+               <div class="link-webinar-slot">
+                  <a href="#">
+                     <img src="https://blog.codewithdan.com/wp-content/uploads/2023/06/Docker-Logo.png" alt="Docker">
+                     <h4 class="link-webinar-text">Docker</h4>
+                  </a>
+               </div>
+               <div class="link-webinar-slot">
+                  <a href="#">
+                     <img src="https://assets.apidog.com/blog/2023/04/postman-logo.png" alt="Postman">
+                     <h4 class="link-webinar-text">Postman</h4>
+                  </a>
+               </div>
+               <div class="link-webinar-slot">
+                  <a href="#">
+                     <img src="https://www.jenkins.io/images/logo-title-opengraph.png" alt="Jenkins">
+                     <h4 class="link-webinar-text">Jenkins</h4>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section id="about" class="section">
+         <div class="container">
+            <h2>About</h2>
+            <p>Learn more about CodeSync.PH and our mission.</p>
+         </div>
+      </section>
+      <section id="explore" class="section">
+         <div class="container">
+            <h2>Explore</h2>
+            <p>Delve into a world of content, resources, and opportunities.</p>
+         </div>
+      </section>
+   </main>
+   <footer class="footer">
+      <p>&copy;<span id="footer-year"></span>CodeSyncPH. All rights reserved. &nbsp;&nbsp;<a href="#">Terms</a>&nbsp;&nbsp; <a href="#">Privacy</a>&nbsp;&nbsp; <a href="#">Security</a>&nbsp;&nbsp; <a href="#">Status</a> &nbsp;&nbsp;<a href="#">Contact</a></p>
+   </footer>
+</body>
+<script src="script.js"></script>
+<script type="text/javascript" src="particles.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="update.js"></script>
+
+</html>

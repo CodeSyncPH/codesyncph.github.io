@@ -1,0 +1,156 @@
+.footer {
+    position: sticky;
+    padding: 3%;
+    top: 100%;
+    display: flex;
+    color: #848d97;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a {
+    color: #848d97;
+}
+
+.footer a:hover {
+    color: hsl(20, 100%, 55%);
+}
+
+.footer>p {
+    font-size: 11pt;
+}
+
+.events-secondary-container {
+    margin: 30px 0;
+}
+
+.uploads-container {
+    margin: 20px 0;
+    padding: 10px 0;
+    position: sticky;
+    top: 100%;
+
+}
+
+.link-webinar-container {
+    display: inline-flex;
+    margin-top: 20px;
+    margin-bottom: 120px;
+}
+
+.link-webinar-container hr {
+    border-color: var(--color-orange-400);
+}
+
+.link-webinar-slot {
+    position: relative;
+    width: 400px;
+    height: 225px;
+    margin: 5px 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.link-webinar-slot>img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.link-webinar-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background for better readability */
+    color: var(--color-white-100);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.img-effect {
+    position: relative;
+    width: 100%;
+    padding-top: 50%;
+    margin: 5rem 13rem;
+}
+
+.img-effect>.block {
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    perspective: 1000px;
+}
+
+.img-effect>.block:nth-of-type(1) {
+    height: 80%;
+    top: 10%;
+    left: 17%;
+    width: 15%;
+}
+
+.img-effect>.block:nth-of-type(2) {
+    top: 0;
+    left: 35%;
+}
+
+.img-effect>.block:nth-of-type(3) {
+    height: 80%;
+    top: 10%;
+    left: 64%;
+    width: 15%;
+}
+
+.img-effect>.block>.side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('pictures/codesync.jpg');
+    background-size: auto 100%;
+    box-shadow: -1vw 0.5vw 1vw rgba(0, 0, 0, 0.3);
+}
+
+.img-effect>.block>.side.-main {
+    height: 100%;
+    width: 100%;
+    transform: rotateY(30deg);
+    transform-origin: 0 50%;
+}
+
+.img-effect>.block>.side.-left {
+    height: 100%;
+    width: 20%;
+    transform-origin: 0 50%;
+    transform: rotateY(-60deg) translateX(-100%);
+    filter: brightness(40%);
+}
+
+.img-effect>.block:nth-of-type(1)>.side.-main {
+    background-position: 4% 50%;
+    background-size: auto 130%;
+}
+
+.img-effect>.block:nth-of-type(1)>.side.-left {
+    background-position: 0 50%;
+    background-size: auto 130%;
+}
+
+.img-effect>.block:nth-of-type(2)>.side.-main {
+    background-position: 50% 0;
+}
+
+.img-effect>.block:nth-of-type(2)>.side.-left {
+    background-position: 28.5% 0;
+}
+
+.img-effect>.block:nth-of-type(3)>.side.-main {
+    background-position: 96% 50%;
+    background-size: auto 130%;
+}
+
+.img-effect>.block:nth-of-type(3)>.side.-left {
+    background-position: 78% 50%;
+    background-size: auto 130%;
+}
